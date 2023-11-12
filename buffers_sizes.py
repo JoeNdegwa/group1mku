@@ -9,7 +9,7 @@ def modify_buffer_sizes(sock, send_buffer_size, receive_buffer_size):
 
 def main():
     # Example server address
-    server_address = ('localhost', 12345)
+    server_address = ('tryhackme.com', 80)
 
     # Create a socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,8 +22,8 @@ def main():
     print(f"Default Receive Buffer Size: {default_receive_buffer_size} bytes")
 
     # Modify the buffer sizes
-    new_send_buffer_size = 8192  # Set your desired send buffer size
-    new_receive_buffer_size = 8192  # Set your desired receive buffer size
+    new_send_buffer_size = 10240  # Set your desired send buffer size
+    new_receive_buffer_size = 10240  # Set your desired receive buffer size
 
     modify_buffer_sizes(sock, new_send_buffer_size, new_receive_buffer_size)
 
